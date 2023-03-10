@@ -49,7 +49,7 @@ watchEffect(() => {
         </p>
       </div>
       <div
-        class="content prose prose-lg max-w-none prose-img:m-auto prose-img:rounded prose-pre:scroll dark:prose-invert"
+        class="content prose prose-lg max-w-none prose-img:m-auto prose-img:rounded prose-a:break-words prose-pre:scroll dark:prose-invert"
         v-html="marked.parse(articleDetail.content)"
       ></div>
     </div>
