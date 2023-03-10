@@ -1,9 +1,4 @@
 <script setup lang="ts">
-import { useSiteStore } from "@/stores/site";
-import { watchEffect } from "vue";
-
-const siteStore = useSiteStore();
-
 const props = withDefaults(
   defineProps<{
     status?: string;
@@ -14,10 +9,6 @@ const props = withDefaults(
     reason: "前面的区域以后再来探索吧。",
   }
 );
-
-watchEffect(() => {
-  document.title = `404喵 | ${siteStore.site.title}`;
-});
 </script>
 
 <template>
