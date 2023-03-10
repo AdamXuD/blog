@@ -1,0 +1,42 @@
+@import "./base.css";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;300;400;500;600;700;900&display=swap');
+
+html {
+    font-family: "Noto Serif SC", sans-serif;
+}
+
+html::-webkit-scrollbar,
+.scroll::-webkit-scrollbar,
+pre::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+html::-webkit-scrollbar-thumb,
+.scroll::-webkit-scrollbar-thumb,
+pre::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+}
+
+html::-webkit-scrollbar-thumb,
+.scroll::-webkit-scrollbar-thumb {
+    background-color: #0002;
+}
+
+html::-webkit-scrollbar-track,
+.scroll::-webkit-scrollbar-track {
+    background-color: #fff;
+}
+
+html.dark::-webkit-scrollbar-thumb,
+.dark .scroll::-webkit-scrollbar-thumb,
+pre::-webkit-scrollbar-thumb {
+    background-color: #fff4;
+}
+
+html.dark::-webkit-scrollbar-track,
+.dark .scroll::-webkit-scrollbar-track {
+    background-color: #181818;
+}
+
+
