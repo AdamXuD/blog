@@ -2,20 +2,9 @@
 import { useArticleStore } from "@/stores/article";
 import { timeFormat } from "@/utils";
 import { computed, watchEffect } from "vue";
-import { marked } from "marked";
-import hljs from "highlight.js";
 import { useSiteStore } from "@/stores/site";
 import ErrorHint from "@/components/ErrorHint.vue";
-
-marked.setOptions({
-  highlight: (code, lang) => {
-    const language = hljs.getLanguage(lang) ? lang : "plaintext";
-    return hljs.highlight(code, { language }).value;
-  },
-  langPrefix: "language-",
-  gfm: true,
-  breaks: true,
-});
+import marked from "@/utils/marked";
 
 const props = defineProps<{
   article_id: number;
@@ -49,7 +38,7 @@ watchEffect(() => {
         </p>
       </div>
       <div
-        class="content prose prose-lg max-w-none prose-img:m-auto prose-img:rounded prose-a:break-words prose-pre:scroll dark:prose-invert"
+        class="content prose prose-lg max-w-full dark:prose-invert break-words"
         v-html="marked.parse(articleDetail.content)"
       ></div>
     </div>
