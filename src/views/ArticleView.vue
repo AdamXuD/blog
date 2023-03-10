@@ -13,6 +13,8 @@ marked.setOptions({
     return hljs.highlight(code, { language }).value;
   },
   langPrefix: "language-",
+  gfm: true,
+  breaks: true,
 });
 
 const props = defineProps<{
